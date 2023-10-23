@@ -29,28 +29,20 @@ nav .menu{
     width: 2.25rem;
     height: 2rem;
 }
-nav .menu span{
-    color: #000;
-    height: 0.4rem;
-    width: 100%;
-    background-color: black;
-    border-radius: 0.2rem;
-}
 
-nav ul.open{
-    display: flex;
-}
+
+
 
 a{
-    margin-left: 5px;
+    margin-left: 7px;
     text-decoration: none;
 }
 
 .items {
     background-image: linear-gradient(
       to right,
-      #54b3d6,
-      #54b3d6 50%,
+      #014e6a,
+      #014e6a 50%,
       #000 50%
     );
     background-size: 200% 100%;
@@ -62,10 +54,13 @@ a{
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
   }
-  
+  #navbar{
+    display: flex;
+    gap: 2rem;
+  }
   .items:before{
     content: '';
-    background: #54b3d6;
+    background: #014e6a;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -77,37 +72,60 @@ a{
   
   .items:hover {
    background-position: 0;
-   filter: brightness(1.2); 
   }
-  .items:hover svg path{
-    stroke: #54b3d6; 
-  }
+
  
   .items:hover::before{
     width: 100%;
   }
+  #mobile{
+    display: none;
+  }
+  #mobile i{
+    color: #000;
+    align-items: center;
+  }
 
   @media (max-width:850px){
     nav .menu{
-        display: flex;
-        
+        display: flex;    
+
     }
     nav{
         flex-direction: column;
         align-items: start;
     }
     nav ul{
-        display:none;
-        flex-direction: column;
-        width: 100%;
+        display:flex;
         margin-bottom: .25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 90px;
+        right: -3000px;
+        width: 50%;
+        height: 100vh;
+        background-color: #CFDEE7;
+        padding: 40px 0 0 10px;
+        border-radius: 13px;
+        margin-right: 10px;
+        border-top: 10px;
+        transition:0.3s ease-in-out;
+    }
+    
+    #navbar.active{
+        right: 0px;
     }
     nav ul li{
         width: 100%;
         text-align: center;
     }
-    nav ul li a{
-        margin: 0.2rem 0.5rem;
+    
+    #mobile{
+        display: block;
+        
     }
+    
 
   }
