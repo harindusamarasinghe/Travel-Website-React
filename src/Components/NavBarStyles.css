@@ -3,6 +3,7 @@
     justify-content: space-between;
     white-space: nowrap;
     align-items: center;
+    margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
     padding-top: 5px;
@@ -10,16 +11,34 @@
     padding-right: 30px;
     padding-bottom: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
-    height: 80px;
+    height: 75px;
     border-radius: 13px;
 }
 h1{
     cursor: pointer;
 }
-.nav--menu{
-    list-style: none;
+
+
+nav .menu{
+    display: none;
+    position:absolute;
+    top:0.75rem;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+nav .menu span{
+    color: #000;
+    height: 0.4rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.2rem;
+}
+
+nav ul.open{
     display: flex;
-    gap: 2rem;
 }
 
 a{
@@ -37,7 +56,7 @@ a{
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
-    padding: 5px 0;
+    padding: 5px 15px;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,4 +85,29 @@ a{
  
   .items:hover::before{
     width: 100%;
+  }
+
+  @media (max-width:850px){
+    nav .menu{
+        display: flex;
+        
+    }
+    nav{
+        flex-direction: column;
+        align-items: start;
+    }
+    nav ul{
+        display:none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: .25rem;
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+    }
+
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import './NavBarStyles.css';
 import Home from '../Icons/home-smile-svgrepo-com.svg';
 import Tour from '../Icons/travel-expenses-svgrepo-com.svg';
@@ -6,12 +6,21 @@ import Gallery from '../Icons/gallery-svgrepo-com.svg';
 import About from '../Icons/about-svgrepo-com (1).svg';
 import Contact from '../Icons/contact-svgrepo-com.svg';
 
+
 export default function NavBar(){
+    const[menuOpen,setMenuOpen]=useState(false);
     return(
         <div>
-            <nav className='navbar--items'>
+            <nav className='navbar--items' >
                 <h1>CocoShores</h1>
-                <ul className='nav--menu'>
+                <div className='menu' onClick={()=>{
+                        setMenuOpen(!menuOpen);
+                    }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul className={menuOpen?"open":""}>
                     <li className='items'>
                         <img src={Home} alt='Home Icon'/>
                         <a href='/' className='links'>Home</a>
