@@ -15,7 +15,6 @@ export default class NavBar extends Component{
                 <h1>CocoShores</h1>
                 <ul id='navbar' className={this.state.clicked?"#navbar active":"#navbar"}>
                     <li className='items'>
-                        
                         <a href='/' className='links'>Home</a>
                     </li>
                     <li className='items'>
