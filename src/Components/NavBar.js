@@ -1,4 +1,5 @@
 import React ,{Component} from 'react';
+import '../App.css';
 import './NavBarStyles.css';
 
 
@@ -8,10 +9,33 @@ export default class NavBar extends Component{
     handlelick=()=>{
         this.setState({clicked:!this.state.clicked})
     }
+    // eslint-disable-next-line no-dupe-class-members
+    state = {
+        scrolled: false,
+    };
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 100) {
+            this.setState({ scrolled: true });
+        } else {
+            this.setState({ scrolled: false });
+        }
+    };
+    
     render(){
+        const { scrolled } = this.state;
     return(
         <div>
-            <nav className='navbar--items' >
+            <nav className={`navbar--items ${scrolled ? 'scrolled' : ''}`} >
                 <h1>CocoShores</h1>
                 <ul id='navbar' className={this.state.clicked?"#navbar active":"#navbar"}>
                     <li className='items'>

@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
+@font-face {
+  font-family: headingFont;
+  src: url(./Icons/junegull.ttf);
+}
 *{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  --primary-colour:#19647E;
+  --secondary-colour:#e5e8e9;
+  --text-colour:#031927;
+  --red-colour:#CA2E55;
   padding: 0;
   margin: 0;
 }

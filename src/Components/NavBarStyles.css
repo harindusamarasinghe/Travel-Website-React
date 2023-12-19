@@ -1,3 +1,6 @@
+*{
+  color: white;
+}
 
 .navbar--items{
     display: flex;
@@ -14,6 +17,10 @@
     border-radius: 13px;
     position: absolute;
     width: 95%;
+    position: fixed;
+    background-color: var(--secondary-colour);
+    z-index: 2;
+    background-color:var(--text-colour);
 }
 h1{
     cursor: pointer;
@@ -42,9 +49,9 @@ a{
 .items {
     background-image: linear-gradient(
       to right,
-      #014e6a,
-      #014e6a 50%,
-      #000 50%
+      #CA2E55,
+      #CA2E55 50%,
+      white 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -61,7 +68,7 @@ a{
   }
   .items:before{
     content: '';
-    background: #014e6a;
+    background: #CA2E55;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -134,3 +141,10 @@ a{
     
 
   }
+  
+  .navbar--items.scrolled {
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+    background-color: var(--primary-colour);
+}
