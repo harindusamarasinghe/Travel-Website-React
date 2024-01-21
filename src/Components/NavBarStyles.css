@@ -18,9 +18,7 @@
     position: absolute;
     width: 95%;
     position: fixed;
-    background-color: var(--secondary-colour);
     z-index: 2;
-    background-color:var(--text-colour);
 }
 h1{
     cursor: pointer;

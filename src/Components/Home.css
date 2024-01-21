@@ -1,3 +1,6 @@
+body{
+  background-color: #0D1321;
+}
 
 .home--div {
   display: flex;
@@ -5,22 +8,27 @@
   align-items: center;
   justify-content: center;
   height: 100vh;    
-  background: url(../Icons/rsz_1image_17.jpg), lightgray 50% / cover no-repeat ;
+  background: url(../Icons/pexels-damon-hall-1705253.jpg), lightgray 50% / cover no-repeat ;
+  background-position: 50% 25%;
+  
   flex-shrink: 0;
   background-size: cover;
-    
+  
   }
+
   
   
   .home--heading {
     color: var(--text-colour);
+    font-family: homeHeading;
+    font-size: 48px;
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
     white-space: normal;
-    margin-top: -200px;
+    margin-top: -50px;
   }
-
+  
   #style-2 {
     overflow: hidden;
     position: relative;
@@ -51,19 +59,25 @@
   #style-2:hover::before {
     transform-origin: 0% 50%;
     transform: scaleX(1);
+    color: var(--text-colour);
   }
   #style-2:hover::after {
     transform: translate3d(0, 0, 0);
+    color: var(--text-colour);
+    font-family: homeHeading;
   }
   
   #style-2 span {
-    color:var(--secondary-colour);
+    font-family: homeHeading;
+    color:var(--red-colour);
+    letter-spacing: normal;
     display: inline-block;
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
   }
   
   #style-2:hover span {
     transform: translate3d(-200%, 0, 0);
+    color: var(--text-colour);
   }
   
  
@@ -75,7 +89,6 @@
     vertical-align: top;
   }
   .play-btn {
-
     width: 80px;
     height: 80px;
     background: radial-gradient( var(--primary-colour),#CA2E55 75%);
@@ -87,7 +100,7 @@
     margin-top: 320px;
     margin-left: 425px;
 
-    
+    visibility: hidden; 
     box-shadow: 0px 0px 25px 3px  #CA2E55;
   }
   .play-btn:hover{
@@ -112,6 +125,7 @@
     z-index: 1;
     -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    
   }
   
   .play-btn:before {
@@ -285,7 +299,17 @@
       will-change: transform;
       
     }
-    
+    .home{
+      position: absolute;
+      margin-top: 40px;
+      border-radius: 0px;
+      min-height: 50px;
+      border-color: #CA2E55;
+      margin-left: 40%;
+      background-color: var(--text-colour);
+      padding: 0 0;
+      width: 175px;
+    }
     .button-28:disabled {
       pointer-events: none;
     }
@@ -302,15 +326,19 @@
       box-shadow: none;
       transform: translateY(0);
     }
+
+    /**Cards**/
+
     .cards--heading{
-      color: var(--text-colour);
+      color: var(--secondary-colour);
       white-space: nowrap;
       overflow: hidden;
-      font-family: headingFont;
+      font-family: homeHeading;
       text-align: center;
-      margin-top: 7%;
+      margin-top: 10%;
       letter-spacing: 0.2rem;
       font-size: 50px;
+      
     }
     .cards--container1,.cards--container2{
         display: flex;
@@ -319,6 +347,7 @@
         align-items:center;
         padding: 50px;
         gap: 5rem;
+        
     }
     .card {
       width: 20rem;
@@ -344,35 +373,28 @@
        
     }
 
-    .cards--topic,
-    .cards--para {
+    .cards--topic{
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      visibility: hidden;
+      
       opacity: 0;
-      transition: visibility 0s, opacity 0.3s ease-in-out;
+      
     }
-    .card:hover .cards--para{
-      margin-top: 30%;
-      letter-spacing: .1rem;
-      font-weight: 700;
-      width: 80%;
-    }
+    
     .card:hover .cards--topic{
       position: absolute;
       margin-top: 40%;
-      font-family: headingFont;
-      letter-spacing: .5rem;
-      color: var(--secondary-colour);
+      font-family: homeHeading;
+      letter-spacing: .2rem;
+      color: var(--text-colour);
       border: 1px solid;
       padding: .5rem;
-      background-color: var(--primary-colour);
-      border-color: var(--primary-colour);
+      border-color: var(--text-colour);
+      background-color: var(--secondary-colour);
     }
-    .card:hover .cards--topic,
-    .card:hover .cards--para {
+    .card:hover .cards--topic {
       visibility: visible;
       opacity: 1;
       transition: visibility 0s, opacity 0.3s ease-in-out;
@@ -383,5 +405,3 @@
       -webkit-filter: grayscale(100%);
       -webkit-transition: all 0.5s ease; 
   }
-
-    

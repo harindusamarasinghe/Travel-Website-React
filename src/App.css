@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @font-face {
   font-family: headingFont;
-  src: url(./Icons/junegull.ttf);
+  src: url(../src/Icons/CourierPrime-Regular.ttf);
 }
+@font-face {
+  font-family: homeHeading;
+  src: url(../src/Icons/cinzel.bold.ttf);
+}
+
 *{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;

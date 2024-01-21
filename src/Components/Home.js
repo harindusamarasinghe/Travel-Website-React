@@ -1,7 +1,7 @@
 import '../App.css';
 import './Home.css';
 import React from 'react';
-
+import WhychooseUs from './WhyChooseUs';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
           Spend your next vacation with <a href="#" id="style-2" data-replace="CocoShore Family."><span>Sri Lanka's best travel Agency</span></a>
         </h1>
         <a class="play-btn" href="#"></a>
-       
+        <button className="button-28 home">TRAVEL WITH US</button>
       </div>
 
       <div className='home--searchBar'>
@@ -77,7 +77,7 @@ const Home = () => {
           
 
           <div className='card'>
-            <img src="https://images.pexels.com/photos/18619140/pexels-photo-18619140/free-photo-of-nine-arch-bridge-in-sri-lanka.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt='sigiriya' className='img'></img>
+            <img src="https://images.pexels.com/photos/18050345/pexels-photo-18050345/free-photo-of-footpath-in-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt='sigiriya' className='img'></img>
             <div className='card--content'>
               <h2 className='cards--topic'>ELLA</h2>
               
@@ -107,13 +107,10 @@ const Home = () => {
             <img src="https://images.pexels.com/photos/19159247/pexels-photo-19159247/free-photo-of-landscape-field-countryside-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt='sigiriya' className='img'></img>
             <div className='card--content'>
               <h2 className='cards--topic'>RATNAPURA</h2>
-             
             </div>
-          </div>
-
-          
+          </div>    
     </div>
-    
+    <WhychooseUs></WhychooseUs>
     </>
   );
 }
